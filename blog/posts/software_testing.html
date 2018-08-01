@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog - Chainsaw Bucktooth</title>
+	<link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<nav class="col-10">
+  <li id="homelink"><a href="http://neillperry.github.io/">CB</a></li>
+  <li><a href="http://neillperry.github.io/about.html">About</a></li>
+  <li><a href="http://neillperry.github.io/portfolio.html">Portfolio</a></li>
+	<h3 id="headline" class="col-10">Neill Perry</h3>
+</nav>
+
+<div id="maincontent">
+
+  <h1>Software Testing</h1>
+	<aside>May 2, 2017</aside>
+
+	  <p>"Testing can only show the presence of errors, not their absence" - Edsger Dijkstra</p>
+
+		<p>Asking why software testing is important is like asking why breathing is important. It's pretty obvious, but since I need to fill up an entire blog post about this topic, I will now belabor the point. </p>
+
+    <p>According to Sommerville, software serves two purposes: make sure the product works and find errors. First, the programmers should ensure that their code works correctly under expected use conditions. Ideally, there should be a test for every user requirement / system features to validate. Second, testing is necessary to discover, and later correct, undesirable behavior, such as crashes. This second purpose seeks to uncover defects.</p>
+
+    <p>Sommerville doesn't mention the term 'fuzzing,' but I think it fits his second prong. According to <a href="https://en.wikipedia.org/wiki/Fuzzing"></a>Fuzzing is "an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program." Somerville distinguishes between validation, where you try to ensure that the program will work pefectly given correct inputs, and defect testing, where you see if you can get the system to perform incorrectly.</p>
+
+    <p>There is a testing process!! First, design test cases. You can't test every possible scenario, so Sommerville advises selecting those test cases that have discovered defects in other programs. Next, prepare test data. Then, run program with that data. Finally, compare your testing results to test cases.</p>
+
+    <h4>Black Box vs White Box</h4>
+
+    <p>In the software testing underworld, there is black-box and white-box testing. According to the course materials, black box refers to testing the system as a whole without consideration of what its innards are doing. So far as you, the junior developer cares, the insides are a mysterious black box. Examples of black-box testing include <b>equivalence partitioning</b> and <b>boundary value analysis</b>. White-box testing, on the other hand, looks at the actual structure of the program being tested. One form of white-box testing is <b>basis path testing</b>. From the literature, it seems like unit testing is done with white-box, and integration testing is done with black-box testing.</p>
+
+    <p>Finally, we're almost done here I swear, there is test automation. To facilitate testing, software developers developed software that automates the testing process. Sommerville refers to CASE but doesn't explain it in depth. It's a set of tools for software developers, and it includes automate testing capabilities. (For the record, CASE stands for <b>C</b>omputer <b>A </b>ided <b>S</b>oftware <b>E</b>ngineering). CASE has tools for every phase of the software development life cycle, i.e., design, documentation, project management, diagram, planning, maintenance, you name it. </p>
+
+		<p>Addendum: an interesting tidbit that I picked up from <a href='https://www.oreilly.com/ideas/the-alarming-state-of-secure-coding-neglect'>this article</a> on inadequate software development is penetration testing. Security expert Rob van der Veer describes pen testing as a form of black-box testing, and he compared it to "checking the security of a bank by rattling the doors and windows." He also said that pen testing is inadequate by itself to find defects because you can only use it very late in the development process after you have a working system. Additionally, pen testing cannot reveal defects such as "whether there is adequate logging, whether there are internal flaws such as unnecessary privilege promotion, etc." Very interesting comments. <p>
+
+		<p>Addendum II: At the Brooklyn JS meeting last night, one of the presenters displayed the following quote: "Tests are one way to gain confidence to change things. If tests pass, you know that the change didn't break anything." That made me realized that tests are more important, or play a bigger role, in agile development than in waterfall method because agile intends to move quickly and having a robust tests that detect code breaks is vital to achieving that speed.</p>
+
+		<p>Addendum III: Okay, at some point I will need to rewrite this post, but here's another great quote.  This one is from Maaret Pyhavarvi: "As a tester I don't break your code, I break your illusions about your code."<p>
+
+
+  </div>
+  	<div class="footer">
+  		<ul>
+  			<li>&#169 2016 Chainsaw Bucktooth</li>
+  			<li><a data-email="neill.perry@flatironschool.com" href="mailto:neill.perry@flatironschool.com">Contact Us</a></li>
+  			<li><a href="http://neillperry.github.io/privacy.html">Privacy</a></li>
+  			<li>Site Map</li>
+  			<li>Careers</li>
+  		</ul>
+  	</div>
+  </body>
+  </html>

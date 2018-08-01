@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog - Neill Perry</title>
+	<link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<nav>
+  <li id="homelink"><a href="http://neillperry.github.io/">NP</a></li>
+  <li><a href="http://neillperry.github.io/about.html">About</a></li>
+  <li><a href="http://neillperry.github.io/portfolio.html">Portfolio</a></li>
+	<h3 id="headline">Neill Perry</h3>
+</nav>
+
+<div id="maincontent">
+
+  <h1>Relational Databases</h1>
+	<time>April 5, 2017</time>
+
+	  <p>"If you must blink, do it now" - Kubo</p>
+
+		<p>I am going to try to talk about relational databases in an intelligent way, and I am going off my smudged notes and some low-grade plagarism. Nothing you read is original, and some of it may be wrong. You've been warned.</p>
+
+    <p>A database is "a collection of true propositions, a collection of persistent data." A data model is an "abstract, self-contained, logical definition of objects, operators and so forth that constitute the abstract machine with which users interact." Per Wikipedia, a relational database is one that relies on the relational model.  So what is that model?  It's one where "data can be represented as rows in a table, and such rows can be directly interpreted as true propositions."  It has nothing to say about the internal level of the model, merely concerned with how the database looks to the user.</p>
+
+		<p>Oracle <a href="https://docs.oracle.com/javase/tutorial/jdbc/overview/database.html">documents</a> has a better explanation.  "In simplest terms, a relational database is one that presents information in tables with rows and columbns." Oracle then goes on to talk about how relational databases follow certain rules to preserve the accuracy of the data.</p>
+
+		<ol>
+			<li>All rows should be distinct. There are no duplicate rows.  In other words, you can't have two entries for the same person because then you wouldn't there might be conflicts and you wouldn't know which row was correct.</li>
+			<li>Column values cannot be a group or an array.</li>
+			<li>The database has to accept null values.  A null value is different than the numerical value 0.</li>
+		</ol>
+
+
+    <p>Examples of relational databases include MySQL, PostgreSQL and SQLite3. Of course, not all databases are relational. Some, like MongoDB and Firebase, store information as a collection of JSON documents. So what are the advantages of using one over the other?  Well, here is an excellent <a href="https://www.pluralsight.com/blog/software-development/relational-non-relational-databases">posting</a>that does just that. Accodrding to Ms. Homan, relational databases are ideal for systems that involves lots of transactions because SQL allows the linkage of information from different tables via foreign keys. Non-relational databases might be more approrpiate for systems that involves voluminous data, where linkage might be unnecessary or infeasible, or systems that need to store serialized arrays.</p>
+
+		<ul>
+			<li>"It lies at the intersection between the social and cognitive science on the one hand, and computer science and technology on the oher.""</li>
+			<li>It focuses on "the engineering goabl of improving the usability of computers"</li>
+			<li>It touches on a host of disciplines, such as ergonomics, cognitive engineers, web designers, GUI designers, etc.</li>
+		</ul>
+
+		<p>Human-computer interface "involves those aspects of a system that the user interacts with.  It is part of the computer system that provides access to a computer's internal resources.  This is a technology rather than a research area." In other words, it's the part of the system that provides access. For example, the digital thermostat provides access to HVAC controls.</p>
+
+    <p>Interactive systems are playing a larger role in computing. Decades ago, only a limited number of specialists accessed a computer. Later, it expanded to a core group of engineers and academics. Finally, it's available to almost everyone. Additionally, computing power has increased, whcih means that designers need to facilitate greater use of increasingly powerful computers by a growing body of untrained users. And what designers need to do is facilitate that interaction and optimize user experience.</p>
+
+    <p>An example of user interaction is the self-checkout scanners at grocery stores or the ticket kiosks at airports. The system needs to be designed in a way that makes for an effective, efficient system; otherwise, people will get frustrated at the system and resolve their needs with a human employee, thereby wasting time.</p>
+
+		<p>The user's experience is central to interaction design. The designer needs to account for how the product behaves and how do people use it in the real world. </p>
+
+		<!--
+    A BUTTON TO SHARE A PAGE ON TWITTER - to add later
+  	<a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    -->
+  </div>
+  	<div class="footer">
+  		<ul>
+  			<li>&#169 2016 Chainsaw Bucktooth</li>
+  			<li><a data-email="neill.perry@flatironschool.com" href="mailto:neill.perry@flatironschool.com">Contact Us</a></li>
+  			<li><a href="http://neillperry.github.io/privacy.html">Privacy</a></li>
+  			<li>Site Map</li>
+  			<li>Careers</li>
+  		</ul>
+  	</div>
+  </body>
+  </html>

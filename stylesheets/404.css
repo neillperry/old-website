@@ -1,0 +1,121 @@
+@font-face {
+    font-family: headline;
+    src: url('/fonts/nextrust/nextrust.woff');
+}
+
+@font-face {
+    font-family: bodytext;
+    src: url('/fonts/fanwood/fanwood_text.woff');
+}
+
+body {
+	background-color: #f2f2f2;
+	font-family: bodytext;
+	color: black;
+	font-size: 20px;
+}
+
+/* Remove margins and padding from the list, and add a white background color */
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+		border-top: 10px;
+		border-bottom: 3px;
+		width: 80%;
+		margin-left: 10%;
+		border-radius: 10px;
+}
+
+nav ul li {
+	list-style-type: none;
+}
+/* Float the list items side by side */
+nav li {float: left;}
+
+/* Style the links inside the list items */
+nav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+nav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+nav li.icon {display: none;}
+
+#photo {
+	margin: auto;
+	width: 80%;
+	text-align: center;
+	padding: 20px;
+	border: thin solid #black;
+}
+
+#headline {
+	margin: auto;
+	width: 80%;
+	text-align: center;
+}
+
+
+p {
+	margin-left: 10%;
+}
+
+body {
+	font-size: 20px;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+}
+
+h3 {
+	margin-left: 10%;
+}
+
+.footer {
+	bottom: 10px;
+	background-color: #f2f2f2;
+	margin-left: 10%;
+	width: 80%;
+	text-align: center;
+	position: fixed;
+	border-radius: 15px;
+}
+
+.footer ul {
+		margin: auto;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+		border-top: 10px;
+		border-bottom: 3px;
+}
+
+.footer ul li {
+	display: inline;
+	border-left: thin solid #e6e6e6;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.8em;
+	color: grey;
+}
+
+.footer a {
+	text-decoration: none;
+}

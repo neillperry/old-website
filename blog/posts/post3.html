@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What Could Go Wrong? - Building Secure Apps</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script> -->
+	<script type="text/javascript" src ="script.js"></script>
+</head>
+<body>
+	<h1>What Could Go Wrong? - Building a Secure Application</h1>
+
+<img id="photo" src="https://chainsawbucktooth.github.io/stalking.jpg" alt="Smiley face">
+
+<p>Information security is important to app software developers. We need to appreciate the risks and take steps to mitigate them. We need to develop apps with security in mind from the beginning, not as a last minute add. Developers must incorporate security into the architecture, not apply it to the facade. The purpose of this blog post is to make you the reader security-conscious, to understand a few of the ways that adversaries can compromise an application.  This blog post does not provide remedial guidance; rather it provides resources for developers to learn more about the security landscape and to educate themselves on what they can do.</p>
+
+<p>No application is completely secure. Given enough time and resources, adversaries can compromise anything.  The best you can hope for is to harden your defenses so that attackers go after someone else.  Adversaries target low-hanging fruit.  You don't have to build a perfectly secure app, merely one that dissuades most attackers from trying. If you and your friend are being chased by a bear, you don't have to outrun the bear. You only have to outrun your friend.</p>
+
+<p>Although Apple products have a reputation for being the most secure, they are not impregnable.  Apple's growing populatity has attracted the attention of adversaries, and they have begun developing malware that specifically targets Apple phones and devices.</p>
+
+<img id="photo" src="https://chainsawbucktooth.github.io/iOSthreats.png" alt="Smiley face">
+<h4>Threat Modeling:</h4>
+
+<p>Threat modeling is a process of identifying objectives and risks and taking steps to mitigate them. Threat modeling is done both IT networks as well as applications, such as the ones we are building. The first step in threat modeling is determining vulnerabilities: What does the app do? How do people interact with it, and how does it interact with the rest of the software on the iPhone / iPad? Is there anything in your app that an attacker might want? How would an attacker get into the app. "<a href="https://www.owasp.org/index.php/Application_Threat_Modeling">Modern threat modeling</a> looks at a system from a potential attacker's perspective, as opposed to a defender's point of view."</p>
+
+<h4>Data</h4>
+<p>One of the top things that attackers want is data.  Think of all the data that your app might touch. Someone might be able to determine the user's identity. They might be able to compromise the password used to access the app.  And given how frequently people recycle passwords, that password might unlock other accounts. Your app may reference financial or medical information, it may reveal that user's name and phone number.</p>
+
+<img id="photo" src="https://chainsawbucktooth.github.io/topApps.png" alt="Smiley face">
+
+<h4>Beachhead</h4>
+<p>In addition to stealing information stored in your app, hackers may also be interested in using your app as a beachhead. The word beachhead is a military term, and it refers to the temporary area controlled by invading forces on an enemy beach.  Enemy forces establish a beachhead from which they will later break out and take over even more land. In iOS development, attackers can use an app as a beachhead into other sectors of a phone.  For instance, they can try to gain access to sensitive information in your phone, such as your contacts, text messages, other apps' stored data. For example, some apps grant automatic access to phone calls, text messages, roaming data and payments, which a hacker can exploit to access the phone user's financial resources. Or the malware could force the phone to sign up for premium rate text masseges or phone calls.</p>
+
+https://www.veracode.com/blog/2013/08/developers-guide-to-building-secure-mobile-applications-infographic
+
+<!--
+1
+Step Two: Rank the threats. There are different categories of threats: Auditing and Logging, Authentication, Authorization, Configuration Management, Data Protection, Exception Management.
+You need to sort the threats from highest to lowest risk.
+
+<img id="photo" src="https://chainsawbucktooth.github.io/VeracodeGraphic3.png" alt="Smiley face">
+<img id="photo" src="https://chainsawbucktooth.github.io/VeracodeGraphic4.png" alt="Smiley face">
+
+Step Three: Identify countermeasures and mitigation.
+
+- do you need to store data?
+- do you need login functionality?
+
+*/
+On his website, Ray Wenderlich has a great tutorial on iOS app security.  Unfortunately, the code is three years old, and I couldn't get the app to work in XCode 8.  But the principles remain the same.
+
+What Mr. Wenderlich has done is create a basic app (Objective C). Download and run it in your simulator.  Then, you download
+
+Pen Testing - abbreviated for penetration testing - is a way to poke around the app and see what's inside.
+
+Using your command terminal, you then hack into the app that is running in your XCode simulator.
+Command line utility class-dump-z will tell you everything you want about the code inside. First, it will tell you what Frameworks the bundle app links to. In Wenderlich's lab, you learn that the app uses StoreKit, whcih tells you that the app probably allows in-app purchases.  Next, the command line utility will pull all the public and private methods, instance variables and protocols.
+-->
+
+<h4>Additional Resources</h4>
+<ol>
+	<li><a href="http://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/apple-threat-landscape.pdf">Symantec Apple Threat Landscape</a></li>
+	<li><a href="https://code.tutsplus.com/articles/how-to-secure-an-ios-app--cms-26533">Securing an iOS App</a></li>
+	<li><a href="https://www.raywenderlich.com/45645/ios-app-security-analysis-part-1">iOS App Security and Analysis</a></li>
+	<li><a href="https://www.apple.com/business/docs/iOS_Security_Guide.pdf">iOS Security Guide</a></li>
+	<li><a href="https://www.owasp.org/images/9/94/MobileTopTen.pdf">Mobile App Top 10 Risks</a></li>
+	<li><a href="https://www.nostarch.com/iossecurity">iOS Application Security</a></li>
+</ol>
+<p>For more information on the Flatiron School, please visit their <a href="https://flatironschool.com/">web site</a></p>
+
+<footer>&#169: Chainsaw Bucktooth 2016 - All Rights Reserved</footer>
+
+</body>
+</html>
